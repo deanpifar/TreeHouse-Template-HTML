@@ -4,6 +4,7 @@
 */
 
 @import 'include/_reset.scss';
+
 @import 'theme/_header.scss';
 @import 'theme/_footer.scss';
 
@@ -12,9 +13,6 @@ body {
 }
 
 .main {
-	h3 {
-		margin-bottom: 5px;
-	}
 	h3, h4 {
 		color: #222222;
 		text-transform: uppercase;
@@ -25,17 +23,31 @@ body {
 	h4 {
 		font-size: 18px;
 	}
+	h3 {
+		margin-bottom: 5px;
+	}
 	p {
 		font-size: 20px;
 		color: #777777;
 		font-family: 'Roboto Slab';
 	}
 	&__hero {
-		padding: 123px 25%;
+		padding: 170px 25%;
 		text-align: center;
-		background: linear-gradient( rgba(14, 14, 14, 0.70), rgba(14, 14, 14, 0.70) ), url('../images/main_image.png');
-		background-size: cover;
-		background-position: center;
+		&:before {
+			content: ' ';
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			background: linear-gradient( rgba(14, 14, 14, 0.70), rgba(14, 14, 14, 0.70) ), url('../images/main_image.png');
+			background-size: cover;
+			background-position: center;
+			will-change: transform;
+			z-index: -1;
+		}
 		h2 {
 			font-size: 60px;
 			color: #fff;
@@ -46,13 +58,14 @@ body {
 		a {
 			background-color: #7cc576;
 			display: inline-block;
-			padding: 25px 40px;
+			padding: 20px 45px;
 			text-decoration: none;
 			color: #fff;
 			font-size: 16px;
 			text-transform: uppercase;
 			margin-top: 55px;
 			border-radius: 40px;
+			transition: all 0.5s;
 			span {
 				text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
 			}
@@ -68,15 +81,23 @@ body {
 	&__services {
 		text-align: center;
 		font-size: 0;
-		padding: 100px 10%;
+		padding: 120px 5%;
+		background: #fff;
+		> p {
+			margin-bottom: 25px;
+		}
 		div {
 			display: inline-block;
 			width: 33.333%;
-			padding: 0 25px;
+			padding: 0 50px;
 			vertical-align: top;
 			margin-top: 85px;
 			img {
 				margin-bottom: 38px;
+			}
+			h4 {
+				color: #393939;
+				letter-spacing: 1px;
 			}
 			p {
 				font-size: 14px;
@@ -120,8 +141,7 @@ body {
 				padding: 0 35% 0 0;
 			}
 			ul {
-				margin-top: 20px;
-				margin-bottom: 40px;
+				margin: 40px 0;
 				li {
 					margin: 10px 0;
 					font-size: 16px;
@@ -164,12 +184,13 @@ body {
 			a {
 				background-color: #7cc576;
 				display: inline-block;
-				padding: 20px 35px;
+				padding: 20px 45px;
 				text-decoration: none;
 				color: #fff;
 				font-size: 16px;
 				text-transform: uppercase;
 				border-radius: 30px;
+				transition: all 0.5s;
 				span {
 					text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
 				}
@@ -205,27 +226,21 @@ body {
 				font-size: 0;
 				li {
 					margin: 15px 0;
-					&:nth-child(2) div:first-child img {
-						top: 16px;
-						left: 3px;
-					}
-					&:nth-child(3) div:first-child img {
-						top: 13px;
-						left: 9px;
-					}
 					div {
 						display: inline-block;
 						vertical-align: middle;
-						padding: 0 0 0 10px;
+						padding: 0 0 0 25px;
 						&:first-child {
 							width: 70px;
 							height: 70px;
 							border-radius: 50%;
 							border: 2px solid #000;
+							position: relative;
 							img {
-								position: relative;
-								top: 11px;
-								left: 4px;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate( -50%, -50% );
 							}
 						}
 						&:last-child {
@@ -247,10 +262,12 @@ body {
 				vertical-align: middle;
 				font-weight: bold;
 				text-transform: uppercase;
+				transition: all 0.5s;
 				&:hover {
 					color: #222;
 					span {
 						background-color: #222;
+						transition: all 0.5s;
 						&:before, &:after {
 							background-color: #222;
 						}
@@ -292,7 +309,7 @@ body {
 		}
 	}
 	&__values {
-		padding: 100px 10%;
+		padding: 120px 5%;
 		background-color: #f9f9f9;
 		text-align: center;
 		font-size: 0;
@@ -321,9 +338,15 @@ body {
 				margin: 0 auto;
 				display: inline-block;
 				margin-bottom: 25px;
+				position: relative;
+				h4 {
+					color: #393939;
+				}
 				img {
-					position: relative;
-					top: 18px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate( -50%, -50% );
 				}
 			}
 			p {
@@ -336,6 +359,7 @@ body {
 		padding: 100px 10%;
 		font-size: 0;
 		text-align: center;
+		background: #fff;
 		> p {
 			margin-bottom: 85px;
 		}
@@ -389,6 +413,7 @@ body {
 			color: #fff;
 			font-size: 40px;
 			font-weight: bold;
+			font-family: 'Montserrat';
 			text-transform: uppercase;
 			margin-bottom: 30px;
 		}
@@ -402,6 +427,7 @@ body {
 			color: #fff;
 			border-radius: 6px;
 			border: 3px solid #fff;
+			transition: all 0.5s;
 			&:hover {
 				background-color: #fff;
 				color: #7cc576;
@@ -409,14 +435,14 @@ body {
 		}
 	}
 	&__sponsors {
-		padding: 62px 10%;
+		padding: 62px 5%;
 		text-align: center;
 		background-color: #fff;
 		font-size: 0;
 		div {
 			display: inline-block;
 			vertical-align: middle;
-			width: 20%;
+			width: 25%;
 		}
 	}
 }
