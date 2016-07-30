@@ -1,0 +1,67 @@
+@keyframes fromLeft {
+  from {
+    transform: translate(-200px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translate(200px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  from {
+    transform: translate(0, -200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    transform: translate(0, 200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.animate__fromright {
+  animation-name: fromRight;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+.animate__fromleft {
+  animation-name: fromLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+.animate__frombottom {
+  animation-name: fromBottom;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+.animate__fromtop {
+  animation-name: fromTop;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}

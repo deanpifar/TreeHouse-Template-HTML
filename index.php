@@ -142,21 +142,24 @@
 			<a href="#">Contact us</a>
 		</div>
 		<div class="main__sponsors">
-			<div>
+			<a href="#">
 				<img src="images/Envato.png" alt="">
-			</div>
-			<div>
+			</a>
+			<a href="#">
 				<img src="images/WordPress.png" alt="">
-			</div>
-			<div>
+			</a>
+			<a href="#">
 				<img src="images/Tuts+.png" alt="">
-			</div>
-			<div>
+			</a>
+			<a href="#">
 				<img src="images/Microlancer%20copy.png" alt="">
-			</div>
+			</a>
 		</div>
 	</main>
 	<?php include_once 'include/footer.php'; ?>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/main.js" async defer></script>
 	
 </body>
 

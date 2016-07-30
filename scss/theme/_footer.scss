@@ -1,12 +1,13 @@
 .footer {
 	&__info {
 		background-color: #222222;
-		padding: 60px 10%;
+		padding: 70px 5%;
 		text-align: left;
 		font-size: 0;
 		div {
 			display: inline-block;
 			width: 33.333%;
+			padding: 0 50px;
 			vertical-align: top;
 			h6 {
 				font-size: 18px;
@@ -21,9 +22,6 @@
 				width: calc( 100% - 30px);
 				display: inline-block;
 				color: #ececec;
-			}
-			li {
-				margin: 15px 0;
 			}
 			img {
 				width: 20px;
@@ -40,6 +38,9 @@
 				position: relative;
 				bottom: 4px;
 			}
+			li {
+				margin: 15px 0;
+			}
 		}
 		&__blog {
 			a {
@@ -47,9 +48,13 @@
 			}
 			p, img {
 				vertical-align: middle;
+				transition: all 0.5s;
 				&:hover {
 					color: #7cc576;
 				}
+			}
+			li {
+				margin: 20px 0;
 			}
 		}
 		&__twitter {
@@ -74,12 +79,19 @@
 					margin-top: 5px;
 				}
 			}
+			li {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 			img {
 				position: relative;
 				top: 5px;
 			}
 			p, img {
 				vertical-align: top;
+				transition: all 0.5s;
 			}
 		}
 	}
@@ -99,7 +111,7 @@
 			a {
 				text-decoration: none;
 				display: inline-block;
-				background-color: #222222;
+				background-color: #2b2b2b;
 				vertical-align: middle;
 				border-radius: 50%;
 				height: 40px;

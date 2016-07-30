@@ -5,9 +5,7 @@
 			<ul>
 				<li>
 					<img src="images/icon_location.png" alt="">
-					<p>55 Main St.</p>
-					<p>Toronto, ON</p>
-					<p>M1H 3A5</p>
+					<p>55 Main St. Toronto, ON M1H 3A5</p>
 				</li>
 				<li>
 					<img src="images/icon_iphone.png" alt="">
